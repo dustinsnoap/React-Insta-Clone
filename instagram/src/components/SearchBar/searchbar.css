@@ -1,0 +1,48 @@
+/*______  _______  _______  ______    _______  __   __  _______  _______  ______   
+|       ||       ||   _   ||    _ |  |       ||  | |  ||  _    ||   _   ||    _ |  
+|  _____||    ___||  |_|  ||   | ||  |       ||  |_|  || |_|   ||  |_|  ||   | ||  
+| |_____ |   |___ |       ||   |_||_ |       ||       ||       ||       ||   |_||_ 
+|_____  ||    ___||       ||    __  ||      _||       ||  _   | |       ||    __  |
+ _____| ||   |___ |   _   ||   |  | ||     |_ |   _   || |_|   ||   _   ||   |  | |
+|_______||_______||__| |__||___|  |_||_______||__| |__||_______||__| |__||___|  |_|
+*/
+@import url('https://fonts.googleapis.com/css?family=Grand+Hotel');
+
+.search-bar {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.search-bar > div {
+    display: flex;
+    z-index: 1;
+}
+.search-bar > div > *:not(h1) {
+    margin: 0 2rem;
+}
+.search-bar > div h1 {
+    font-size: 4rem;
+    border-left: 1px solid black;
+    padding: 0 2rem;
+    font-family: 'Grand Hotel', cursive;
+    font-weight: 500;
+}
+.search-bar > div > div {
+    font-size: 2rem;
+    height: 3rem;
+    width: 3rem;
+}
+.search-bar .search {
+    width: 33%;
+    min-width: 200px;
+}
+.search-bar div input {
+    height: 4rem;
+    width: 100%;
+    text-align: center;
+    border: 2px solid rgba(0,0,0,.42);
+    border-radius: 0.5rem;
+    outline: none;
+}
