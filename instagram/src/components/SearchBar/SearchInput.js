@@ -4,23 +4,31 @@ class SearchInput extends Component {
     constructor() {
         super()
         this.state = {
-            search: '',
-            placeholder: 'Search',
+            searchText: 'Search',
             active: false,
+            edited: false,
         }
     }
     h_updateSearch = input => {
         let text = input.target.value
-        this.setState({search: text})
+        this.setState({
+            edited: true,
+            searchText: text
+        })
     }
     h_activate = () => {
         this.setState({active: true})
     }
-    h_deactivate = component => {
+    h_deactivate = () => {
+        if(this.state.searchText === '') this.setState({searchText: 'Search', edited: false})
         this.setState({active: false})
     }
-    h_focusInput = component => {
-        if(component) component.focus()
+    h_focusInput = input => {
+        if(input) {
+            if(this.state.edited) input.value = this.state.searchText
+            input.focus()
+            input.select()
+        }
     }
     render() {
         if(this.state.active)
@@ -29,7 +37,7 @@ class SearchInput extends Component {
                     <div className='placeholder'>
                         <figure className='insta-magnify'></figure>
                     </div>
-                    <input type='text' ref={this.h_focusInput} onChange={this.h_updateSearch} onBlur={this.h_deactivate}/>
+                    <input type='text' ref={this.h_focusInput} onKeyUp={this.h_updateSearch} onBlur={this.h_deactivate}/>
                 </div>
             );
         else
@@ -37,7 +45,7 @@ class SearchInput extends Component {
                 <div className='search dead' onClick={this.h_activate}>
                     <div className='placeholder'>
                         <figure className='insta-magnify'></figure>
-                        <pre className='text'>{this.state.placeholder}</pre>
+                        <pre className='text'>{this.state.searchText}</pre>
                     </div>
                 </div>
             );

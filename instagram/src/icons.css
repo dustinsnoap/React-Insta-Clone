@@ -38,18 +38,18 @@
     height: 66%;
     width: 66%;
     transform: translate(25%, 33%) rotate(-45deg);
-    border: 2px solid black;
-    border-width: 0 0 2px 2px;
+    border: .1em solid black;
+    border-width: 0 0 .1em .1em;
     border-radius: 15%;
     position: relative;
     cursor: pointer;
     transition: background-color 200ms ease-in-out;
 }
-.insta-heart:hover,
+/* .insta-heart:hover,
 .insta-heart:hover::after,
 .insta-heart:hover::before {
     background-color: red;
-}
+} */
 .insta-heart::before, .insta-heart::after {
     content: "";
     border-radius: 50%;
@@ -57,16 +57,18 @@
     width: 83.33%;
     position: absolute;
     transition: background-color 200ms ease-in-out;
+    left: 0;
+    top: 0;
 }
 .insta-heart::before {
-    transform: rotate(45deg)  translate(-77%,8%);
-    border: 2px solid black;
-    border-width: 2px 0px 0px 2px;
+    transform: rotate(45deg)  translate(-30%,-25%);
+    border: .1em solid black;
+    border-width: .1em 0px 0px .1em;
 }
 .insta-heart::after {
-    transform: rotate(45deg) translate(16%,8%);
-    border: 2px solid black;
-    border-width: 2px 2px 0 0;
+    transform: rotate(45deg) translate(48%,-25%);
+    border: .1em solid black;
+    border-width: .1em .1em 0 0;
 }
 /*____ __ __ _____ __    _____ _____ _____ 
 |   __|  |  |  _  |  |  |     | __  |   __|
@@ -86,7 +88,9 @@
     width: 15%;
     border: 2px solid black;
     position: absolute;
-    transform: translate(-50%, 33%) rotate(45deg);
+    transform: translate(100%, 33%) rotate(45deg);
+    left: 0;
+    top: 0;
 }
 /*____ _____ _____ _____ _____ _____ _____ 
 |  _  |     |     |     |  |  |   | |_   _|

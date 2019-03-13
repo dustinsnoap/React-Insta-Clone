@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SearchBar from './components/SearchBar/searchbar'
+import PostContainer from './components/PostContainer/postContainer'
 import dummyData from './dummy-data'
 import './reset.css'
 import './icons.css'
@@ -13,11 +14,11 @@ class App extends Component {
     }
   }
   render() {
-    console.log(this.state.data)
+    // console.log(this.state.data)
     return (
       <div className="App">
         <SearchBar />
-        {/* PostContainer */}
+        {this.state.data.map(post => <PostContainer post={post} key={post.timestamp} />)}
       </div>
     );
   }

@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-// import InputDead from './InputDead'
+import SearchInput from './SearchInput';
+import SearchAction from './searchAction'
 import './searchbar.css'
-import SearchInput from './SearchActive';
 
 class SearchBar extends Component {
     constructor() {
         super()
         this.state = {
+            actions: ['explore', 'heart', 'account'],
         }
     }
     render() {
-        // console.log('search: ' + this.state.search)
         return (
             <div className='search-bar'>
                 <div className='logo'>
@@ -19,15 +19,7 @@ class SearchBar extends Component {
                 </div>
                 <SearchInput />
                 <div className='actions'>
-                    <div className='icon-container'>
-                        <pre className='insta-explore'></pre>
-                    </div>
-                    <div className='icon-container'>
-                        <pre className='insta-heart'></pre>
-                    </div>
-                    <div className='icon-container'>
-                        <pre className='insta-account'></pre>
-                    </div>
+                    {this.state.actions.map(action => <SearchAction action={action} key={action}/>)}
                 </div>
             </div>
         );
