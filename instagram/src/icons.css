@@ -117,3 +117,21 @@
     position: absolute;
     transform: translate(-50%,0)
 }
+/*____ _____ _____ _____ _____ _____ __ __ 
+|     |  _  |   __|   | |     |   __|  |  |
+| | | |     |  |  | | | |-   -|   __|_   _|
+|_|_|_|__|__|_____|_|___|_____|__|    |_|  
+*/
+.insta-magnify {
+    border: 2px solid #666;
+    border-radius: 50%;
+    position: absolute;
+}
+.insta-magnify::after {
+    content: "";
+    height: 75%;
+    width: 25%;
+    background-color: #666;
+    position: absolute;
+    transform: translate(200%,100%) rotate(-45deg);
+}
