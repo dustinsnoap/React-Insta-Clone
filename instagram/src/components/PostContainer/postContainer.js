@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Comments from './comments'
 import './postcontainer.css'
 
@@ -15,6 +16,10 @@ const PostContainer = ({post}) => {
             <Comments comments={post.comments} />
         </article>
     )
+}
+
+PostContainer.propTypes = {
+    post: PropTypes.object,
 }
 
 export default PostContainer

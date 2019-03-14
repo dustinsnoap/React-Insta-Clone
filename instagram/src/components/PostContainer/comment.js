@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Comment = ({comment}) => {
     return (
@@ -12,6 +13,10 @@ const Comment = ({comment}) => {
             </div>
         </div>
     )
+}
+
+Comment.propTypes = {
+    comment: PropTypes.objectOf(PropTypes.string),
 }
 
 export default Comment

@@ -16,10 +16,11 @@
     height: 100px;
     position: fixed;
     top: 0;
-    background-color: #fff;
+    background-color: rgba(256,256,256,.90);
     width: 100%;
     max-width: 1080px;
     min-width: 666px;
+    z-index: 10000;
 }
 .search-bar > div {
     display: flex;

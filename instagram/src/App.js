@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import SearchBar from './components/SearchBar/searchbar'
 import PostContainer from './components/PostContainer/postContainer'
 import dummyData from './dummy-data'
@@ -14,7 +15,6 @@ class App extends Component {
     }
   }
   render() {
-    // console.log(this.state.data)
     return (
       <div className="App">
         <SearchBar />
@@ -22,6 +22,10 @@ class App extends Component {
       </div>
     );
   }
+}
+
+App.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object),
 }
 
 export default App;
