@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Action from '../actions/action'
+import Action from '../Actions/action'
 
 const Comment = ({comment}) => {
     return (

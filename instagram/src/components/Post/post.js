@@ -4,7 +4,7 @@ import Header from './header/header'
 import Content from './content/content'
 import Actions from '../Actions/actions'
 import Statistics from './statistics/statistics'
-import Comments from './comments/comments'
+import Comments from '../Comments/comments'
 
 class Post extends Component {
     constructor({post}) {

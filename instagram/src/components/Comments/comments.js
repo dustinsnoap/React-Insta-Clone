@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Comment from './comment'
 import AddComment from './addcomment'
+import './comments.css'
 
 const Comments = ({comments}) => {
     return (
