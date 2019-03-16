@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Action from '../actions/action'
 
 const Comment = ({comment}) => {
     return (
@@ -8,9 +9,7 @@ const Comment = ({comment}) => {
                 <pre className='username'>{comment.username}</pre>
                 <p className='content'>{comment.text}</p>
             </div>
-            <div className='icon-container'>
-                <pre className='like insta-heart'></pre>
-            </div>
+            <Action action='like' />
         </div>
     )
 }

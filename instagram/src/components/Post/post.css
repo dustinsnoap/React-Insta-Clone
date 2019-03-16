@@ -6,7 +6,7 @@
 |   |    |       | _____| |  |   |  
 |___|    |_______||_______|  |___|
 */
-.post-container {
+.post {
     display: flex;
     flex-direction: column;
     max-width: 666px;
@@ -15,35 +15,35 @@
     border: 1px solid #e6e6e6;
 }
 /* HEADER */
-.post-container header {
+.post header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 10px;
 }
-.post-container header > * {
+.post header > * {
     margin: 0 10px;
 }
-.post-container header .thumbnail {
+.post header .thumbnail {
     height: 50px;
     width: 50px;
     border-radius: 50%;
 }
-.post-container header .username {
+.post header .username {
     font-size: 2rem;
     font-weight: 700;
 }
 /* CONTENT */
-.post-container .content {
+.post .content {
     width: 100%;
     height: fit-content;
 }
-.post-container .content img {
+.post .content img {
     height: 100%;
     width: 100%;
 }
 /* COMMENTS */
-.post-container .comments {
+.post .comments {
     display: flex;
     flex-direction: column;
     font-size: 1.75rem;
@@ -52,24 +52,30 @@
     width: 666px;
     padding: 0 16px;
 }
-.post-container .comments .comment {
+.post .comments .comment {
     margin: 5px 0;
     display: flex;
     align-items: center;
 }
-.post-container .comments .comment .username {
+.post .comments .comment .username {
     font-weight: 700;
     margin-right: 5px;
     float: left;
 }
-.post-container .comments .comment .icon-container {
-    font-size: 1rem;
-    height: 1.5rem;
-    width: 1.5rem;
-    margin-left: 2.5rem;
+.post .comments .comment img {
+    height: 15px;
+    width: 15px;
+}
+/* STATISTICS */
+.post .statistics {
+    display: flex;
+    padding: 0 16px;
+}
+.post .statistics pre {
+    font-size: 1.25rem;
 }
 /* ADD COMMENT */
-.post-container .comments .add-comment {
+.post .comments .add-comment {
     width: 100%;
     display: flex;
     align-items: center;
@@ -79,7 +85,7 @@
     margin-top: 4px;
     padding: 5px 0;
 }
-.post-container .comments .add-comment textarea {
+.post .comments .add-comment textarea {
     border: none;
     font-size: 2rem;
     line-height: 2.4rem;
@@ -88,6 +94,25 @@
     resize: none;
     height: 3rem;
 }
-.post-container .comments .add-comment pre {
+.post .comments .add-comment pre {
     font-size: 2rem;
+}
+/* ACTIONS */
+.post .actions {
+    display: flex;
+    padding: 8px 16px;
+    width: 100%;
+}
+.post .actions .action {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+.post .actions .action:last-of-type {
+    margin: 0 0 0 auto;
+}
+.post .likes {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 4px;
 }

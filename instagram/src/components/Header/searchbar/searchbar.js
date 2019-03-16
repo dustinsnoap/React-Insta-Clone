@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class SearchInput extends Component {
+class SearchBar extends Component {
     constructor() {
         super()
         this.state = {
@@ -35,7 +35,7 @@ class SearchInput extends Component {
             return (
                 <div className='search active'>
                     <div className='placeholder'>
-                        <figure className='insta-magnify'></figure>
+                        <img src='./icons/magnify.svg' alt='search'/>
                     </div>
                     <input type='text' ref={this.h_focusInput} onKeyUp={this.h_updateSearch} onBlur={this.h_deactivate}/>
                 </div>
@@ -44,7 +44,7 @@ class SearchInput extends Component {
             return (
                 <div className='search dead' onClick={this.h_activate}>
                     <div className='placeholder'>
-                        <figure className='insta-magnify'></figure>
+                        <img src='./icons/magnify.svg' alt='search'/>
                         <pre className='text'>{this.state.searchText}</pre>
                     </div>
                 </div>
@@ -52,4 +52,4 @@ class SearchInput extends Component {
     }
 }
 
-export default SearchInput
+export default SearchBar
