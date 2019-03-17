@@ -10,10 +10,16 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      allPosts: dummyData,
-      posts: dummyData,
+      allPosts: [],
+      posts: [],
       events: {filterPostsByUsername: this.h_filterPostsByUsername,},
     }
+  }
+  componentDidMount() {
+    this.setState({
+      allPosts: dummyData,
+      posts: dummyData,
+    })
   }
   h_filterPostsByUsername = str => {
     let filtered = this.state.allPosts.filter(post => {

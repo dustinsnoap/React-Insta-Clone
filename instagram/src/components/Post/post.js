@@ -16,12 +16,19 @@ class Post extends Component {
             statistics: {likes: post.likes},
             comments: post.comments,
             actions: [
-                {name: 'like', click: this.h_like, active: false},
-                {name: 'comment',click: null, active: false},
-                {name: 'share',click: null, active: false},
-                {name: 'save',click: null, active: false},
+                {name: 'like', click: this.h_like},
+                {name: 'comment',click: this.h_null},
+                {name: 'share',click: this.h_null},
+                {name: 'save',click: this.h_save},
             ],
         }
+    }
+    h_null = () => {
+        console.log('Try clicking something that works.')
+    }
+    h_save = (e, target) => {
+        e.stopPropagation()
+        target.classList.toggle('active')
     }
     h_like = (e, target) => {
         e.stopPropagation() //prevents double triggers when child is clicked

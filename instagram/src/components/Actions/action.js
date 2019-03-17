@@ -4,11 +4,11 @@ import Icons from '../Icons/icons.svg'
 
 const Action = ({action}) => {
     return (
-        <svg className='action'
+        <svg className={'action ' + action.name}
             viewBox="0 0 100 100"
             onClick={(e) => action.click(e, e.target)}
             alt={action.name}>
-            
+
             <use xlinkHref={Icons + '#' + action.name}
             onClick={(e) => action.click(e, e.target.parentNode)}/>
         </svg>

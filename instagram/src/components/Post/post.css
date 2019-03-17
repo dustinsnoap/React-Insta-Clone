@@ -64,9 +64,13 @@
     fill: none;
     stroke-width: 4;
 }
-.post .actions .action.active {
+.post .actions .action.like.active {
     fill: red;
     stroke: red;
+}
+.post .actions .action.save.active {
+    fill: #333;
+    stroke: #333;
 }
 .post .actions .action:last-of-type {
     margin: 0 0 0 auto;
