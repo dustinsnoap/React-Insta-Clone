@@ -16,12 +16,23 @@ class Post extends Component {
             statistics: {likes: post.likes},
             comments: post.comments,
             actions: [
-                {name: 'like', click: null},
-                {name: 'comment',click: null},
-                {name: 'share',click: null},
-                {name: 'save',click: null},
+                {name: 'like', click: this.h_like, active: false},
+                {name: 'comment',click: null, active: false},
+                {name: 'share',click: null, active: false},
+                {name: 'save',click: null, active: false},
             ],
         }
+    }
+    h_like = (e, target) => {
+        e.stopPropagation() //prevents double triggers when child is clicked
+        this.setState(prevState => {
+            target.classList.toggle('active')
+            target.classList.contains('active') ? prevState.statistics.likes++ : prevState.statistics.likes--
+            prevState.actions[0].active = !prevState.actions[0].active
+            return ({
+                statistics: prevState.statistics         
+            })
+        })
     }
     render() {
         return (

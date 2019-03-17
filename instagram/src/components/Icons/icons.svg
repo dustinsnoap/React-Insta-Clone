@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id='like' viewbox='0 0 100 100'>
+        <path   d=" M50,25 A15,15 0 0,0 4,40 L50,99 96,40 A15,15 0 0,0 50,25 z"
+                stroke-linejoin="round"/>
+    </symbol>
+    <symbol id='account' viewbox='0 0 100 100'>
+        <path   d=" M2,100 Q2,66 50,66 Q98,66 98,100
+                    M50,2 A1,1 0 0,0 50,55 A1,1 0 0,0 50,2"
+                stroke-linejoin="round" />
+    </symbol>
+    <symbol id='share' viewbox='0 0 100 100'>
+        <path   d=" M2,50 L2,90 Q2,98 10,98 L90,98 Q98,98 98,90 L98,50
+                M50,66 L50,2 M25,25 L50,2 75,25"
+                stroke-linejoin="round" stroke-linecap="round"/>
+    </symbol>
+    <symbol id='save' viewbox='0 0 100 100'>
+        <path   d=" M10,2 L10,98 50,66 90,98 90,2 z"
+                stroke-linejoin="round"/>
+    </symbol>
+    <symbol id='magnify' viewbox='0 0 100 100'>
+        <path   d=" M60,60 A1,1 0 0,0 12,12 A1,1 0 0,0 60,60 L98,98"
+                stroke-linecap="round" />
+    </symbol>
+    <symbol id='logo' viewbox='0 0 100 100'>
+        <path   d=" M20,2 Q2,2 2,20 L2,80 Q2,98 20,98 L80,98 Q98,98 98,80 L98,20 Q98,2 80,2 z
+                    M50,25 A1,1 0 0,0 50,75 A1,1 0 0,0 50,25 z
+                    M77,23 L77,23"
+                stroke-linecap="round" />
+    </symbol>
+    <symbol id='explore' viewbox='0 0 100 100'>
+        <path   d=" M25,75 L45,45 55,55 z"
+                fill="black" stroke-linejoin="round"/>
+        <path   d=" M75,25 L45,45 55,55 z
+                    M50,2 A1,1 0 0,0 50,98 A1,1 0 0,0 50,2 z"
+                fill="none" stroke-linejoin="round" />
+    </symbol>
+    <symbol id='comment' viewbox='0 0 100 100'>
+        <path   d=" M91.25,76.25 A49,49 0 1,0 76.25,91.25 L99,99 91.25,76.25 z"
+                stroke-linejoin="round"/>
+    </symbol>
+</svg>

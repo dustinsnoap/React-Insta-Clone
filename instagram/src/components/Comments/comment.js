@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Action from '../Actions/action'
+// import Action from '../Actions/action'
 
 const Comment = ({comment}) => {
     return (
@@ -9,7 +9,7 @@ const Comment = ({comment}) => {
                 <pre className='username'>{comment.username}</pre>
                 <p className='content'>{comment.text}</p>
             </div>
-            <Action action='like' />
+            {/* <Action action='like' /> */}
         </div>
     )
 }

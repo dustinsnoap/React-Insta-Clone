@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Icons from '../../Icons/icons.svg'
 
 class SearchBar extends Component {
     constructor() {
@@ -35,7 +36,9 @@ class SearchBar extends Component {
             return (
                 <div className='search active'>
                     <div className='placeholder'>
-                        <img src='./icons/magnify.svg' alt='search'/>
+                        <svg viewBox="0 0 100 100" alt="Search">
+                            <use xlinkHref={Icons + '#magnify'} />
+                        </svg>
                     </div>
                     <input type='text' ref={this.h_focusInput} onKeyUp={this.h_updateSearch} onBlur={this.h_deactivate}/>
                 </div>
@@ -44,7 +47,9 @@ class SearchBar extends Component {
             return (
                 <div className='search dead' onClick={this.h_activate}>
                     <div className='placeholder'>
-                        <img src='./icons/magnify.svg' alt='search'/>
+                        <svg viewBox="0 0 100 100" alt="Search">
+                            <use xlinkHref={Icons + '#magnify'} />
+                        </svg>
                         <pre className='text'>{this.state.searchText}</pre>
                     </div>
                 </div>

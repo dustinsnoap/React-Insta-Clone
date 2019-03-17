@@ -1,9 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Icons from '../Icons/icons.svg'
 
 const Action = ({action}) => {
     return (
-        <img className='action' src={'./icons/'+action.name+'.svg'} onClick={action.click} alt={action.name}/>
+        <svg className='action'
+            viewBox="0 0 100 100"
+            onClick={(e) => action.click(e, e.target)}
+            alt={action.name}>
+            
+            <use xlinkHref={Icons + '#' + action.name}
+            onClick={(e) => action.click(e, e.target.parentNode)}/>
+        </svg>
     )
 }
 
