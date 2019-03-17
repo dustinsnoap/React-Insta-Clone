@@ -10,13 +10,21 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
+      allPosts: dummyData,
       posts: dummyData,
+      events: {filterPostsByUsername: this.h_filterPostsByUsername,},
     }
+  }
+  h_filterPostsByUsername = str => {
+    let filtered = this.state.allPosts.filter(post => {
+      return post.username.toLowerCase().indexOf(str.toLowerCase()) !== -1
+    })
+    this.setState({posts: filtered})
   }
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header events={this.state.events} />
         <Posts posts={this.state.posts} />
       </div>
     );

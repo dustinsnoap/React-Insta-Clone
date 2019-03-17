@@ -2,16 +2,18 @@ import React, { Component } from 'react'
 import Icons from '../../Icons/icons.svg'
 
 class SearchBar extends Component {
-    constructor() {
+    constructor({events}) {
         super()
         this.state = {
             searchText: 'Search',
             active: false,
             edited: false,
+            events: events,
         }
     }
     h_updateSearch = input => {
         let text = input.target.value
+        this.state.events.filterPostsByUsername(text)
         this.setState({
             edited: true,
             searchText: text
@@ -40,7 +42,10 @@ class SearchBar extends Component {
                             <use xlinkHref={Icons + '#magnify'} />
                         </svg>
                     </div>
-                    <input type='text' ref={this.h_focusInput} onKeyUp={this.h_updateSearch} onBlur={this.h_deactivate}/>
+                    <input type='text'
+                        ref={this.h_focusInput}
+                        onKeyUp={this.h_updateSearch}
+                        onBlur={this.h_deactivate}/>
                 </div>
             );
         else
