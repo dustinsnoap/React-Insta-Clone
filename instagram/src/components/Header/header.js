@@ -11,18 +11,21 @@ class Header extends Component {
             actions: [
                 {
                     name: 'explore',
-                    click: null,
+                    click: this.h_null,
                 },
                 {
                     name: 'like',
-                    click: null,
+                    click: this.h_null,
                 },
                 {
                     name: 'account',
-                    click: null,
+                    click: this.h_null,
                 }],
             events: events,
         }
+    }
+    h_null = () => {
+        console.log("Nope, nope. To the nope.")
     }
     render() {
         return (
