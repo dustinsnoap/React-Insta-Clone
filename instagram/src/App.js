@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import authenticate from './components/Authentication/authentication'
 import Header from './components/Header/header'
 import Posts from './components/Post/posts'
 import dummyData from './dummy-data'
@@ -41,4 +42,5 @@ App.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.object),
 }
 
-export default App;
+export default authenticate(App);
+// export default App
