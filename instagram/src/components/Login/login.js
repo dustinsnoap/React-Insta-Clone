@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './login.css'
+import {LoginWrapper, LoginElement, LoginHeader, LoginInput, LoginButton, LoginForgot} from './loginStyles'
 
 class Login extends Component {
     constructor(props) {
@@ -33,22 +33,22 @@ class Login extends Component {
     }
     render() {
         return (
-            <div className='login-wrapper'>
-                <div className='login' onKeyUp={this.h_enter}>
-                    <h1>Instagram</h1>
-                    <input
+            <LoginWrapper>
+                <LoginElement onKeyUp={this.h_enter}>
+                    <LoginHeader>Instagram</LoginHeader>
+                    <LoginInput
                         className='username'
                         type='text' placeholder='Phone number, username, or email'
                         onChange={this.h_updateUsername}/>
-                    <input
+                    <LoginInput
                         className='password'
                         type='password'
                         placeholder='Password'
                         onChange={this.h_updatePassword}/>
-                    <button className='submit' onClick={this.h_checkStreetCred}>Log in</button>
-                    <pre className='forgot' onClick={this.h_forgotPassword}>{this.state.forgotText}</pre>
-                </div>
-            </div>
+                    <LoginButton className='submit' onClick={this.h_checkStreetCred}>Log in</LoginButton>
+                    <LoginForgot className='forgot' onClick={this.h_forgotPassword}>{this.state.forgotText}</LoginForgot>
+                </LoginElement>
+            </LoginWrapper>
         )
     }
 }

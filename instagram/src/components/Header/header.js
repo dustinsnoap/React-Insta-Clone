@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Logo from './Logo/logo'
 import SearchBar from './searchbar/searchbar'
 import Actions from '../Actions/actions'
-import './header.css'
+import {HeaderWrapper} from './headerStyles'
 
 class Header extends Component {
     constructor({events}) {
@@ -29,11 +29,11 @@ class Header extends Component {
     }
     render() {
         return (
-            <div className='header'>
+            <HeaderWrapper>
                 <Logo />
                 <SearchBar events={this.state.events} />
                 <Actions actions={this.state.actions} />
-            </div>
+            </HeaderWrapper>
         );
     }
 }

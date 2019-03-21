@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Icons from '../../Icons/icons.svg'
+import {Search} from '../headerStyles'
 
 class SearchBar extends Component {
     constructor({events}) {
@@ -36,7 +37,7 @@ class SearchBar extends Component {
     render() {
         if(this.state.active)
             return (
-                <div className='search active'>
+                <Search className='active'>
                     <div className='placeholder'>
                         <svg viewBox="0 0 100 100" alt="Search">
                             <use xlinkHref={Icons + '#magnify'} />
@@ -46,18 +47,18 @@ class SearchBar extends Component {
                         ref={this.h_focusInput}
                         onKeyUp={this.h_updateSearch}
                         onBlur={this.h_deactivate}/>
-                </div>
+                </Search>
             );
         else
             return (
-                <div className='search dead' onClick={this.h_activate}>
+                <Search onClick={this.h_activate}>
                     <div className='placeholder'>
                         <svg viewBox="0 0 100 100" alt="Search">
                             <use xlinkHref={Icons + '#magnify'} />
                         </svg>
                         <pre className='text'>{this.state.searchText}</pre>
                     </div>
-                </div>
+                </Search>
             );
     }
 }
