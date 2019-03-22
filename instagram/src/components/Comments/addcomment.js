@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import styled from 'styled-components'
+
 class AddComment extends Component {
     constructor({events}) {
         super()
@@ -37,7 +39,7 @@ class AddComment extends Component {
     }
     render() {
         return (
-            <div className='add-comment'>
+            <AddCommentWrapper>
                 <textarea
                     placeholder={this.state.commentText}
                     onChange={this.h_updateHeight}
@@ -46,9 +48,33 @@ class AddComment extends Component {
                     onClick={this.h_focus}
                 ></textarea>
                 <pre>···</pre>
-            </div>
+            </AddCommentWrapper>
         )
     }
 }
 
 export default AddComment
+
+const AddCommentWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    min-height: 50px;
+    height: fit-content;
+    margin-top: 4px;
+    padding: 5px 0;
+
+    textarea {
+        border: none;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        width: 100%;
+        outline: none;
+        resize: none;
+        height: 3rem;
+    }
+    pre {
+        font-size: 2rem;
+    }
+`

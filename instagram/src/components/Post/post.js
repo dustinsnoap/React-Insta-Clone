@@ -6,6 +6,8 @@ import Actions from '../Actions/actions'
 import Statistics from './statistics/statistics'
 import Comments from '../Comments/comments'
 
+import styled from 'styled-components'
+
 class Post extends Component {
     constructor({post}) {
         super()
@@ -43,13 +45,13 @@ class Post extends Component {
     }
     render() {
         return (
-            <article className='post'>
+            <PostWrapper>
                 <Header user={this.state.user} />
                 <Content content={this.state.content} />
                 <Actions actions={this.state.actions} />
                 <Statistics statistics={this.state.statistics} />
                 <Comments comments={this.state.comments} />
-            </article>
+            </PostWrapper>
         )
     }
 }
@@ -59,3 +61,40 @@ Post.propTypes = {
 }
 
 export default Post
+
+const PostWrapper = styled.article`
+    display: flex;
+    flex-direction: column;
+    max-width: 666px;
+    background-color: #fff;
+    margin: 25px 0;
+    border: 1px solid #e6e6e6;
+
+    .actions {
+        display: flex;
+        padding: 8px 16px;
+        width: 100%;
+        
+        .action {
+            height: 25px;
+            width: 25px;
+            margin-right: 10px;
+            stroke: black;
+            fill: none;
+            stroke-width: 4;
+            
+            &.like.active {
+                fill: red;
+                stroke: red;
+            }
+            &.save.active {
+                fill: #333;
+                stroke: #333;
+            }
+
+            &:last-of-type {
+                margin: 0 0 0 auto;
+            }
+        }
+    }
+`

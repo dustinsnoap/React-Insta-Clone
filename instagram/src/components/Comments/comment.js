@@ -1,16 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import Action from '../Actions/action'
+
+import styled from 'styled-components'
 
 const Comment = ({comment}) => {
     return (
-        <div className='comment'>
+        <CommentWrapper>
             <div className='content'>
                 <pre className='username'>{comment.username}</pre>
-                <p className='content'>{comment.text}</p>
+                <p>{comment.text}</p>
             </div>
             {/* <Action action='like' /> */}
-        </div>
+        </CommentWrapper>
     )
 }
 
@@ -19,3 +20,20 @@ Comment.propTypes = {
 }
 
 export default Comment
+
+const CommentWrapper = styled.div`
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+
+    .content {
+        .username {
+            font-weight: 700;
+            margin-right: 5px;
+            float: left;
+        }
+        p {
+            float: left;
+        }
+    }
+`

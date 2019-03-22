@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Comment from './comment'
 import AddComment from './addcomment'
-import './comments.css'
+
+import styled from 'styled-components'
 
 class Comments extends Component {
     constructor({comments}) {
@@ -28,10 +29,10 @@ class Comments extends Component {
     }
     render() {
         return (
-            <div className='comments'>
+            <CommentsWrapper>
                 {this.state.comments.map((c,i) => <Comment comment={c} key={i} />)}
                 <AddComment events={this.state.events} />
-            </div>
+            </CommentsWrapper>
         )
     }
 }
@@ -41,3 +42,13 @@ Comments.propTypes = {
 }
 
 export default Comments
+
+const CommentsWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    font-size: 1.75rem;
+    line-height: 1.85rem;
+    text-align: left;
+    width: 666px;
+    padding: 0 16px;
+`

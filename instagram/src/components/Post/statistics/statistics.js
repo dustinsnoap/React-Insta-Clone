@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import styled from 'styled-components'
+
 const Statistics = ({statistics}) => {
     return (
-        <div className='statistics'>
+        <StatsWrapper>
             <pre className='likes'>{statistics.likes} likes</pre>
-        </div>
+        </StatsWrapper>
     )
 }
 
@@ -14,3 +16,12 @@ Statistics.propTypes = {
 }
 
 export default Statistics
+
+const StatsWrapper = styled.div`
+    display: flex;
+    padding: 0 16px;
+
+    pre {
+        font-size: 1.25rem;
+    }
+`

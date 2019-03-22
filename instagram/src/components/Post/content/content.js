@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import styled from 'styled-components'
+
 const Content = ({content}) => {
     return (
-        <div className='content'>
+        <ContentWrapper>
             <img src={content.imageUrl} alt={content.timestamp}/>
-        </div>
+        </ContentWrapper>
     )
 }
 
@@ -15,3 +17,13 @@ Content.propTypes = {
 }
 
 export default Content
+
+const ContentWrapper = styled.div`
+    width: 100%;
+    height: fit-content;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+`
