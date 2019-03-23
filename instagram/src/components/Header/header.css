@@ -1,0 +1,86 @@
+/*_   __  _______  _______  ______   _______  ______   
+|  | |  ||       ||   _   ||      | |       ||    _ |  
+|  |_|  ||    ___||  |_|  ||  _    ||    ___||   | ||  
+|       ||   |___ |       || | |   ||   |___ |   |_||_ 
+|       ||    ___||       || |_|   ||    ___||    __  |
+|   _   ||   |___ |   _   ||       ||   |___ |   |  | |
+|__| |__||_______||__| |__||______| |_______||___|  |_|
+*/
+/* SEARCH BAR */
+/* .header .search {
+    font-size: 2rem;
+    display: flex;
+} */
+/* .header .search .placeholder {
+    width: fit-content;
+    min-width: 3rem;
+    display: flex;
+    justify-content: center;
+} */
+/* .header .search .placeholder img {
+    height: 1.5rem;
+    width: 1.5rem;
+} */
+
+/* .header .search {
+    width: 33%;
+    height: 4rem;
+    min-width: 200px;
+    border: 2px solid rgba(0,0,0,.42);
+    border-radius: 0.5rem;
+    position: relative;
+} */
+/* .header .search .placeholder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+} */
+/* .header .search .placeholder svg {
+    height: 15px;
+    width: 15px;
+    fill: none;
+    stroke: black;
+    stroke-width: 6;
+    margin: 0 0.5rem;
+} */
+/* .header .search .placeholder .text {
+    position: relative;
+    margin: 0 3px;
+} */
+.header .search.active .placeholder {
+    position: relative;
+    width: fit-content;
+    height: 100%;
+}
+.header .search.active input {
+    text-align: left;
+}
+/* .header .search figure {
+    height: 13px;
+    width: 13px;
+    transform: translateY(-2px);
+} */
+.header div input {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+}
+/* ACTIONS */
+.header .actions .action {
+    height: 35px;
+    width: 35px;
+    fill: none;
+    stroke: black;
+    stroke-width: 4;
+}
+.header .actions .action {
+    margin: 0 2rem;
+}
